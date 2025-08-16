@@ -9,10 +9,9 @@ const items = [
 ];
 
 function Value({type, value}){
-  if(type==="currency" || type==="currency2")
-    return <div className="kpi-value">{value.toLocaleString("en-US",{style:"currency",currency:"USD", maximumFractionDigits:0})}</div>;
-  if(type==="pct0" || type==="pct2")
-    return <div className="kpi-value">{Number(value).toFixed(2)}%</div>;
+  if(type==="currency" || type==="currency2") return <div className="kpi-value">{formatCurrency(value)}</div>;
+  if(type==="pct0") return <div className="kpi-value">{formatPct(value,2)}</div>;
+  if(type==="pct2") return <div className="kpi-value">{formatPct(value,2)}</div>;
   return <div className="kpi-value">{value?.toLocaleString()}</div>;
 }
 
@@ -26,9 +25,8 @@ export default function KpiGrid({ kpis }){
           <div className="card" key={it.key}>
             <div className="kpi-title">{it.label}</div>
             <Value type={it.type} value={v}/>
-            <div className="kpi-delta" style={{color: up ? "var(--up)" : "var(--down)", display:"flex",alignItems:"center",gap:6}}>
-              <span style={{fontSize:11, fontWeight:700}}>{up ? "▲" : "▼"}</span>
-              <span>{Math.abs(it.delta).toFixed(2)}%</span>
+            <div className="kpi-delta" style={{color: up ? "var(--up)" : "var(--down)"}}>
+              {up ? "▲" : "▼"} {Math.abs(it.delta).toFixed(2)}%
             </div>
           </div>
         )

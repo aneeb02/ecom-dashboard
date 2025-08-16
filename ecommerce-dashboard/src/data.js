@@ -1,0 +1,50 @@
+// Keep the shapes identical to the frontend's needs
+module.exports = {
+  kpis: {
+    ecommerceRevenue: 268277,
+    newCustomers: 198,
+    repeatPurchaseRate: 67.54,
+    averageOrderValue: 402.21,
+    ecommerceConversionRate: 1.27
+  },
+  revenueOverTime: [
+    { date: "2020-02-01", revenue: 5000,  conversionRate: 0.06 },
+    { date: "2020-02-08", revenue: 8500,  conversionRate: 0.08 },
+    { date: "2020-02-15", revenue: 12000, conversionRate: 0.07 },
+    { date: "2020-02-22", revenue: 18000, conversionRate: 0.12 },
+    { date: "2020-03-01", revenue: 15000, conversionRate: 0.10 },
+    { date: "2020-03-08", revenue: 23000, conversionRate: 0.15 },
+    { date: "2020-03-15", revenue: 17000, conversionRate: 0.11 },
+    { date: "2020-03-22", revenue: 14000, conversionRate: 0.09 },
+    { date: "2020-03-29", revenue: 25000, conversionRate: 0.13 },
+    { date: "2020-04-05", revenue: 20000, conversionRate: 0.11 }
+  ],
+  productPerformance: [
+    { product: "Product 1", revenue: 29503, conversionRate: 1.53 },
+    { product: "Product 2", revenue: 67557, conversionRate: 1.47 },
+    { product: "Product 3", revenue: 30869, conversionRate: 1.53 },
+    { product: "Product 4", revenue: 40404, conversionRate: 1.46 },
+    { product: "Product 5", revenue: 99944, conversionRate: 1.42 }
+  ],
+  marketingChannels: [
+    { channel: "AdRoll",       revenue: 56115, conversionRate: 1.45 },
+    { channel: "LinkedIn Ads", revenue: 53221, conversionRate: 1.53 },
+    { channel: "YouTube Ads",  revenue: 47870, conversionRate: 1.45 },
+    { channel: "Bing Ads",     revenue: 38219, conversionRate: 1.54 },
+    { channel: "Google Ads",   revenue: 37643, conversionRate: 1.45 },
+    { channel: "Facebook Ads", revenue: 35128, conversionRate: 1.47 }
+  ],
+  statePerformance: [
+    { state: "California",    revenue: 72000 },
+    { state: "Texas",         revenue: 55000 },
+    { state: "Florida",       revenue: 48000 },
+    { state: "New York",      revenue: 61000 },
+    { state: "Illinois",      revenue: 32000 },
+    { state: "Pennsylvania",  revenue: 25000 }
+  ],
+  devicePerformance: [
+    { device: "Desktop", revenue: 118971, conversionRate: 1.47 },
+    { device: "Mobile",  revenue: 59041,  conversionRate: 1.37 },
+    { device: "Tablet",  revenue: 89905,  conversionRate: 1.58 }
+  ]
+};
