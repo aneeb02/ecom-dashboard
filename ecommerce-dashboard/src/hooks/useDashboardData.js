@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { clampSeriesByDate } from "../lib/formatters";
 
-const API = '';
+// Use environment-based API URL
+const API = process.env.NODE_ENV === 'production' ? '' : '';
 
 async function getJSON(path) {
   const res = await fetch(`${API}${path}`, { headers: { Accept: 'application/json' } });
