@@ -1,0 +1,51 @@
+:root{
+  --bg:#f7f8fa;
+  --card:#ffffff;
+  --text:#0f172a;         /* darker */
+  --muted:#6b7280;
+  --border:#e6e6e6;       /* slightly lighter */
+  --accent-blue:#1f4b99;  /* PenPath-like navy */
+  --accent-orange:#f2793d;
+  --up:#2ebd85;
+  --down:#e04f5f;
+  --radius:6px;           /* smaller, match screenshot */
+  --gap:20px;             /* tighter */
+}
+
+.container{max-width: 1180px; margin:0 auto; padding:18px;} /* match header width */
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:14px 16px;      /* compact card padding */
+  box-shadow: 0 0 0 0 rgba(0,0,0,0); /* flat like screenshot */
+}
+
+.kpi-grid{grid-template-columns: repeat(5, 1fr)}
+.kpi-title{font-size:12px; color:var(--muted); margin-bottom:6px; letter-spacing:.1px}
+.kpi-value{font-size:24px; font-weight:700; line-height:1.15}  /* slightly smaller but heavier */
+.kpi-delta{font-size:12px; margin-top:6px}
+
+.header{display:flex; align-items:center; justify-content:space-between; margin-bottom:12px}
+.title{font-weight:700; letter-spacing:.2px}
+.controls{display:flex; align-items:center; gap:10px}
+.select,.btn{
+  border:1px solid var(--border); background:#fff; border-radius:6px; padding:8px 10px; font-size:13px;
+}
+
+/* section grids to match proportions in screenshot */
+.section-grid{grid-template-columns: 1.12fr 1fr; gap:20px}
+.bottom-grid{grid-template-columns: 1.06fr 1fr 1fr; gap:20px}
+
+.table{width:100%; border-collapse:separate; border-spacing:0}
+.td{padding:10px 0; border-bottom:1px solid var(--border)}
+.progress{height:8px; background:#f4f6f8; border-radius:999px; overflow:hidden}
+.progress > span{display:block; height:100%}
+.badge{font-size:12px; color:var(--muted)}
+.legend{font-size:12px; color:var(--muted); margin-top:8px}
+
+@media (max-width: 1100px){
+  .kpi-grid{grid-template-columns: repeat(3, 1fr)}
+  .section-grid,.bottom-grid{grid-template-columns: 1fr}
+}
