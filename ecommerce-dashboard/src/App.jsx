@@ -9,7 +9,7 @@ import DeviceBars from "./components/DeviceBars";
 import useDashboardData from "./hooks/useDashboardData";
 
 export default function App(){
-  const { data, loading, error, ui, derived } = useDashboardData();
+  const { data, loading, error, ui, derived, lastUpdated, isRefreshing, refreshData } = useDashboardData();
 
   if(loading) return <div className="container">Loading…</div>;
   if(error) return <div className="container">Error: {String(error)}</div>;
@@ -17,7 +17,13 @@ export default function App(){
 
   return (
     <div className="container grid">
-      <Header range={ui.range} setRange={ui.setRange}/>
+      <Header 
+        range={ui.range} 
+        setRange={ui.setRange}
+        lastUpdated={lastUpdated}
+        isRefreshing={isRefreshing}
+        refreshData={refreshData}
+      />
       <KpiGrid kpis={data.kpis}/>
       <Filters
         kpi1={ui.kpi1} setKpi1={ui.setKpi1}

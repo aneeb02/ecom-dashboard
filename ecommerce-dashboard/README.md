@@ -66,6 +66,16 @@ This will start both the backend (port 4000) and frontend (port 5173) servers.
 - **CORS**: Enabled for frontend-backend communication
 - **Proxy**: Vite proxy routes `/api/*` requests to the backend
 
+## Key Features
+
+🗺️ **Real-time US State Revenue Map**: Interactive choropleth map showing revenue data for all 50 states with hover tooltips and color-coded visualization
+
+⚡ **Live Data Sync**: Automatic data refresh every 30 seconds with manual refresh option
+
+📊 **Real-time Status**: Live status indicator showing data freshness and last update time
+
+🎨 **Enhanced Visualizations**: Improved map colors, legends, and user interactions
+
 ## Fixed Issues
 
 ✅ **"Unexpected token '<'" error**: Fixed by updating the frontend to use the correct API hook instead of trying to fetch from a non-existent static file.
@@ -73,6 +83,10 @@ This will start both the backend (port 4000) and frontend (port 5173) servers.
 ✅ **Frontend-Backend connection**: Updated the data fetching hook to use Vite's proxy configuration.
 
 ✅ **CORS configuration**: Backend properly configured with CORS middleware.
+
+✅ **State Map Data**: Expanded from 6 states to all 50 US states with comprehensive revenue data.
+
+✅ **Real-time Updates**: Added automatic data synchronization and manual refresh capability.
 
 ## Troubleshooting
 
