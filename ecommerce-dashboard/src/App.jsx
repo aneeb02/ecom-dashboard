@@ -6,7 +6,7 @@ import ProductBars from "./components/ProductBars";
 import ChannelTable from "./components/ChannelTable";
 import USChoropleth from "./components/USChoropleth";
 import DeviceBars from "./components/DeviceBars";
-import useDashboardData from "./lib/useDashboardData";
+import useDashboardData from "./hooks/useDashboardData";
 
 export default function App(){
   const { data, loading, error, ui, derived } = useDashboardData();
